@@ -74,7 +74,7 @@ sidebar.subheader("Models and parameters")
 
 model = sidebar.selectbox(
     label="모델 선택",
-    options=["gpt-3.5-turbo", "gpt-4-turbo", "모델3"]
+    options=["gpt-4-turbo", "gpt-3.5-turbo", "모델3"]
 )
                     
 
@@ -169,11 +169,7 @@ if userInput and userInput['text'] != st.session_state['userinput_check']:
     with chatContainer:
         with st.chat_message('assistant'):
             st.write(response_message)
-    # with chatContainer:
-    #     for i in st.session_state['chat']:
-    #         if i.sender is 'ai':
-    #             with st.chat_message(i.sender):
-    #                st.write(i.msg)
+    
     userInput = None
 
 
